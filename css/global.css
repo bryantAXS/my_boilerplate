@@ -1,5 +1,5 @@
 /*
-	Author: 
+	Author: Bryant Hughes
 */
 /*****************************
 RESETS
@@ -30,31 +30,23 @@ article, aside, figure, footer, header,
 hgroup, nav, section { display:block; }
 
 nav ul { list-style:none }
-
 blockquote, q { quotes:none }
 
 blockquote:before, blockquote:after,
 q:before, q:after { content:''; content:none }
 
 /* remember to define focus styles! */
-:focus { outline: 0;
-}
+:focus { outline: 0;}
 
 a { margin:0; padding:0; border:0; font-size:100%; vertical-align:baseline; background:transparent }
-
 ins { background-color:#ff9; color:#000; text-decoration:none }
-
 mark { background-color:#ff9; color:#000; font-style:italic; font-weight:bold }
-
 del { text-decoration: line-through }
-
 abbr[title], dfn[title] { border-bottom:1px dotted #000; cursor:help }
 
 /* tables still need cellspacing="0" in the markup */
 table { border-collapse:collapse; border-spacing:0 }
-
 hr { display:block; height:1px; border:0; border-top:1px solid #ccc; margin:1em 0; padding:0 }
-
 input, select { vertical-align:middle }
 /* meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/ */
 code, pre { font-family: "Courier New", monospace, serif; font-size: 1em }
@@ -75,22 +67,11 @@ button::-moz-focus-inner{padding:0;border:none }
 .ie7 img { -ms-interpolation-mode: bicubic }
 /* END RESET CSS */
 
-/*****************************
-START YOUR CSS HERE
-*****************************/
-
 
 
 /*****************************
-MISCELLANEOUS
+M I S C
 *****************************/
-/* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
-a:active { outline: none; }
-a:focus { outline: thin dotted; }
-
-ul { margin-left:30px; list-style:disc;}
-ol { margin-left:30px; list-style: decimal; }
-
 pre { 
   padding: 15px; 
   /* www.pathf.com/blogs/2008/05/formatting-quoted-code-in-blog-posts-css21-white-space-pre-wrap/ */
@@ -99,7 +80,6 @@ pre {
   white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
   word-wrap: break-word; /* IE */
 }
-
 
 /* Hide for both screenreaders and browsers */
 .hidden { display:none; visibility:hidden; } 
@@ -111,6 +91,9 @@ pre {
 
 /* Hide visually and from screenreaders, but maintain layout */
 .invisible { visibility: hidden; }
+
+/* lighter version of a clearfix */
+.hasLayout{overflow:hidden;}
 
 /* >> The Magnificent CLEARFIX << */
 .clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
@@ -132,32 +115,20 @@ pre {
 .mb0{margin-bottom:0 !important;}.mb5{margin-bottom:5px !important;}.mb10{margin-bottom:10px !important;}.mb15{margin-bottom:15px !important;}.mb20{margin-bottom:20px !important;}.mb25{margin-bottom:25px !important;}.mb30{margin-bottom:30px !important;}.mb35{margin-bottom:35px !important;}.mb40{margin-bottom:40px !important;}.mb50{margin-bottom:50px !important;}.mb75{margin-bottom:75px !important;}.mb100{margin-bottom:100px !important;}
 .ml0{margin-left:0 !important;}.ml5{margin-left:5px !important;}.ml10{margin-left:10px !important;}.ml15{margin-left:15px !important;}.ml20{margin-left:20px !important;}.ml25{margin-left:25px !important;}.ml30{margin-left:30px !important;}.ml35{margin-left:35px !important;}.ml40{margin-left:40px !important;}.ml50{margin-left:50px !important;}.ml75{margin-left:75px !important;}.ml100{margin-left:100px !important;}
 
-
-
-
 /*****************************
 PRINT STYLES 
 inlined to avoid http request
 *****************************/
 @media print {
   * { background: transparent !important; color: #444 !important; text-shadow: none; }
-
   a, a:visited { color: #444 !important; text-decoration: underline; }
-
-  a:after { content: " (" attr(href) ")"; } 
-
+  a:after { content: " (" attr(href) ")"; }
   abbr:after { content: " (" attr(title) ")"; }
-  
   .ir a:after { content: ""; }  /* Don't show links for images */
-  
   pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
-  
   img { page-break-inside: avoid; }
-
   @page { margin: 0.5cm; }
-
   p, h2, h3 { orphans: 3; widows: 3; }
-
   h2, h3{ page-break-after: avoid; }
 }
 
@@ -166,18 +137,13 @@ MOBILE STYLES
 *****************************/
 @media all and (orientation:portrait) { 
   /* Style adjustments for portrait mode goes here */
-  
 }
-
 @media all and (orientation:landscape) { 
-  /* Style adjustments for landscape mode goes here */
-  
+  /* Style adjustments for landscape mode goes here */ 
 }
-
 /* Grade-A Mobile Browsers (Opera Mobile, iPhone Safari, Android Chrome)  
    Consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
 @media screen and (max-device-width: 480px) {
-
   /* Prevent iOS, WinMobile from adjusting font size */
   html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } 
 }
